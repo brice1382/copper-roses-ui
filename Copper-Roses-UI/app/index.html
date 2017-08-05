@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="copper-roses">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Copper Roses</title>
+    <link href="app.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+    <script type="text/javascript" src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+
+
+
+</head>
+<body>
+
+<div ng-include="'views/layouts/navbar/navbar-tpl.html'"></div>
+
+<div ng-view></div>
+
+<div ng-include="'views/layouts/footer/footer-tpl.html'"></div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+<script type="text/javascript" src="bower_components/angular-money-mask/rw-money-mask.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="bower_components/sp-manager/dist/sp-manager.js"></script>
+<script type="text/javascript" src="bower_components/kjur-jsrsasign/jsrsasign-all-min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="app.run.js"></script>
+<script type="text/javascript" src="views/layouts/navbar/_module.js"></script>
+<script type="text/javascript" src="views/layouts/navbar/navbarCtrl.js"></script>
+<script type="text/javascript" src="views/layouts/footer/_module.js"></script>
+<script type="text/javascript" src="views/layouts/footer/footerCtrl.js"></script>
+<script type="text/javascript" src="services/authentication/_module.js"></script>
+<script type="text/javascript" src="services/authentication/authenticationSvc.js"></script>
+<script type="text/javascript" src="views/login/_module.js"></script>
+<script type="text/javascript" src="views/login/loginCtrl.js"></script>
+<script type="text/javascript" src="views/login/loginSvc.js"></script>
+<script type="text/javascript" src="views/home/_module.js"></script>
+<script type="text/javascript" src="views/home/homeCtrl.js"></script>
+<script type="text/javascript" src="views/auction/_module.js"></script>
+<script type="text/javascript" src="views/auction/auctionCtrl.js"></script>
+<script type="text/javascript" src="views/manage/_module.js"></script>
+<script type="text/javascript" src="views/manage/manageSvc.js"></script>
+<script type="text/javascript" src="views/manage/manageCtrl.js"></script>
+<script type="text/javascript" src="components/version/version.js"></script>
+<script type="text/javascript" src="components/version/version-directive.js"></script>
+<script type="text/javascript" src="components/version/interpolate-filter.js"></script>
+</body>
+</html>

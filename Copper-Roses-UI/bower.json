@@ -1,0 +1,21 @@
+{
+  "name": "copper-roses",
+  "description": "UI for Copper Roses",
+  "version": "0.0.0",
+  "homepage": "http://copper-roses.com",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.6.4",
+    "angular-route": "1.6.4",
+    "angular-loader": "1.6.4",
+    "angular-mocks": "1.6.4",
+    "html5-boilerplate": "^5.3.0",
+    "sp-manager": "*",
+    "bootstrap": "^3.3.7",
+    "sweetalert": "^1.1.3",
+    "font-awesome": "^4.7.0",
+    "animate.css": "^3.5.2",
+    "kjur-jsrsasign": "jsrsasign#^8.0.3",
+    "angular-money-mask": "^1.0.4"
+  }
+}

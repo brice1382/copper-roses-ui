@@ -1,0 +1,58 @@
+<main class="container">
+    <div id="home-view">
+        <!-- This will be gotten from the database dynamically. -->
+        <h4 class="currentUser"></h4>
+    </div>
+    <div id="profile-view" class="panel panel-default profile-area">
+        <div class="panel-heading">
+            <h3 class="fullName">Brandon Rice</h3>
+        </div>
+        <div class="panel-body">
+            <!-- This value will also be gotten from the database eventually. -->
+            <img src="../../assets/images/Avatar.png" class="avatar" alt="avatar" style="height: 100px; width: 100px">
+            <div>
+                <!-- This value will also be gotten from the database. -->
+                <label> Beaner</label>
+                <h3 class="nickname">Testing</h3>
+            </div>
+            <pre class="full-profile"></pre>
+        </div>
+    </div>
+    <button type="button" class="btn btn-danger" ng-click="hm.test()">testingClick</button>
+</main>
+<script>
+    var userProfile;
+
+    function getProfile() {
+        if (!userProfile) {
+            var accessToken = localStorage.getItem('access_token');
+
+            if (!accessToken) {
+                console.log('Access token must exist to fetch profile');
+            }
+
+            webAuth.client.userInfo(accessToken, function(err, profile) {
+                if (profile) {
+                    userProfile = profile;
+                    displayProfile();
+                }
+            });
+        } else {
+            displayProfile();
+        }
+    }
+
+    function displayProfile() {
+        // display the profile
+        document.querySelector('#profile-view .nickname').innerHTML =
+            userProfile.nickname;
+
+        document.querySelector('.fullName').innerHTML = userProfile.fullName;
+
+        document.querySelector(
+            '#profile-view .full-profile'
+        ).innerHTML = JSON.stringify(userProfile, null, 2);
+
+        document.querySelector('#profile-view img').src = userProfile.picture;
+    }
+</script>

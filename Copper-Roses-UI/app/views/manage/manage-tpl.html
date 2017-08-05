@@ -1,0 +1,35 @@
+<div class="nukeIt space1"></div>
+<div class="container listContainer">
+    <h1 class="ChangeWithTimes">Item Description</h1>
+    <textarea class="descriptionArea" ng-keyup="mg.description.ngKeyup()" spellcheck="true" rows="5"
+              ng-model="mg.descriptionText" id="description" name="description" title="description"></textarea>
+    <span class="help-block" id="text-spot">{{mg.characters}}</span>
+    <button class="btn btn-primary" id="testing" type="button" title="save">
+        Save
+        <i class="fa fa-save"></i>
+    </button>
+    <div class="space-sm"></div>
+</div>
+<div class="space1"></div>
+<div class="container">
+    <div class="well">
+        <button class="btn btn-primary" type="button" title="save">
+            Save For Later
+            <i class="fa fa-save"></i>
+        </button>
+        <button class="btn btn-success" type="button" title="list">
+            List Item
+            <i class="fa fa-list"></i>
+        </button>
+        <button class="btn btn-default pull-right" ng-click="mg.cancel()" type="button" title="cancel">
+            Cancel
+            <i class="fa fa-trash"></i>
+        </button>
+        <input class="nukeIt pull-right" name="amount" type="text" money-mask money-mask-prepend="$" style="width: 100px; height: 35px; border-radius: 6px; margin-right: 30px"
+               ng-model="mg.amount" title="Place Bids">
+    </div>
+</div>
+<!-- Save the descriptions to the database, loop over them on page load to provide a list the perform a GET
+ call for that listing when link is clicked. Need to be able to upload photos. Might have to just use my Drive
+ account in the mean time since I can get photos to save using that. On the auction page I need to loop over
+ the listed items and do an ng-repeat. Need to figure out the syntax for biding. -->

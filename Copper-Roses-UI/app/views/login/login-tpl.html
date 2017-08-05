@@ -1,0 +1,48 @@
+<style>
+    ul {
+        display: none;
+    }
+
+    md-content {
+        width: 45%;
+        border-radius: 6px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img {
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        height: auto;
+    }
+</style>
+<div class="container logContainer" ng-controller="LoginCtrl">
+    <div style="height: 30px"></div>
+    <div class="col-md-6 col-md-offset-3 buttonHolder">
+        <img class="" src="../../assets/images/theRealProfilePic.png" alt=""/>
+    </div>
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin" role="form" novalidate>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-10 col-md-offset-1">
+                    <label class="control-label">Username</label>
+                    <input class="form-control" type="text" title="Username" ng-model="lc.username">
+                </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <label class="control-label" style="margin-top: 10px">Password</label>
+                    <input class="form-control" type="text" title="Password" ng-model="lc.password">
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                    <label class="control-label"></label>
+                    <button type="button" class="form-control btn btn-primary" ng-click="lc.logsins()">Log In</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div style="height: 30px"></div>
+</div>

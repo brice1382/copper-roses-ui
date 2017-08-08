@@ -62,5 +62,4 @@
         }
     }
 })();
-/** For now I just have the if statement validating two timestamps to see which is bigger. The exp date should be appended
- * to a web token and the jwt decoded then checked for expiration. Future TODO: write method for creating JWT. */
+
